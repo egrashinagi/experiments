@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #d6d6d6;
+}
+
+input, textarea, button {
+    margin: 10px;
+}
+
+.error input,
+.error textarea
+{
+    border: 1px solid red;
+}
+
