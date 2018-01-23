@@ -1,3 +1,5 @@
+import './index.scss';
+
 let form = document.querySelector('.form');
 let validateButton = form.querySelector('.form__submit');
 let login = form.querySelector('.form__login');
