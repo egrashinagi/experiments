@@ -5,34 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<form class="form">
+<form class="form" method="post" action="http://test.autre.ru/form.php" id="qwe">
     <div>
         <label>
-            <input type="text" class="field form__login" placeholder="введите логин">
+            <input type="text" class="field form__login" placeholder="введите логин" form="qwe">
         </label>
     </div>
     <div>
         <label>
-            <input type="text" class="field form__password" placeholder="введите пароль">
+            <input type="text" class="field form__password" placeholder="введите пароль" form="qwe">
         </label>
     </div>
     <div>
         <label>
-            <input type="text" class="field form__password-conf" placeholder="подтвердите пароль">
+            <input type="text" class="field form__password-conf" placeholder="подтвердите пароль" form="qwe">
         </label>
     </div>
     <div>
         <label>
             <textarea name="message" id="" cols="30" rows="10" class="field form__message"
-                      placeholder="введите ваше сообщение"></textarea>
+                      placeholder="введите ваше сообщение" form="qwe"></textarea>
         </label>
     </div>
-    <div>
-        <label>
-            <button type="submit" class="form__submit">Отправить</button>
-        </label>
-    </div>
-
+    <input type="submit" class="form__submit" value='submit' formmethod="post" form="qwe">
 </form>
 </body>
 </html>

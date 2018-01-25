@@ -9,12 +9,11 @@ let message = form.querySelector('.form__message');
 let fields = form.querySelectorAll('.field');
 
 function generateError(text) {
-    let error = document.createElement('div');
+    let error = document.createElement('span');
     error.className = 'error';
     error.style.color = 'red';
     error.innerHTML = text;
     return error;
-
 }
 
 function removeValidation() {
@@ -29,7 +28,7 @@ function checkField() {
     for (let i = 0; i < fields.length; i++) {
         if (!fields[i].value) {
             console.log('field is blanck', fields[i]);
-            let error = generateError('Поле не заполнено');
+            let error = generateError('*');
             form[i].parentElement.insertBefore(error, fields[i]);
         }
     }
@@ -48,3 +47,50 @@ form.addEventListener('submit', function (event) {
     checkField();
     checkPasswordMatch();
 });
+
+// let form = document.querySelector('.cards');
+// console.log('нашлась!', form);
+//
+// function showError(container, errorMessage) {
+//     container.className = 'error';
+//     let msgElem = document.createElement('span');
+//     msgElem.className = "error-message";
+//     msgElem.innerHTML = errorMessage;
+//     container.appendChild(msgElem);
+// }
+//
+// function resetError(container) {
+//     container.className = '';
+//     if (container.lastChild.className === "error-message") {
+//         container.removeChild(container.lastChild);
+//     }
+// }
+//
+// function validate(form) {
+//     let elems = form.elements;
+//
+//     resetError(elems.number.parentNode);
+//     if (!elems.number.value) {
+//         showError(elems.number.parentNode, ' * ');
+//     }
+//
+//     resetError(elems.month.parentNode);
+//     if (!elems.month.value) {
+//         showError(elems.month.parentNode, ' * ');
+//     }
+//
+//     resetError(elems.year.parentNode);
+//     if (!elems.year.value) {
+//         showError(elems.year.parentNode, ' * ');
+//     }
+//
+//     resetError(elems.username.parentNode);
+//     if (!elems.username.value) {
+//         showError(elems.username.parentNode, ' * ');
+//     }
+//
+//     resetError(elems.pass.parentNode);
+//     if (!elems.pass.value) {
+//         showError(elems.pass.parentNode, ' * ');
+//     }
+// }
