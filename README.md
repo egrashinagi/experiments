@@ -1,4 +1,4 @@
-# Эксперименты с валидацией формы JS
+# Эксперименты с валидацией формы JS и не только
 
 ### Start development
 Run in development mode **http://localhost:3000**
