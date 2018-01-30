@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        function buttonClick(button) {
+            alert('Вы нажали на кнопку под названием' + ' ' + button.name + ' ' + 'и со значением' + ' ' + button.value + ' ' + 'тип кнопки' + ' ' + button.type);
+        }
+
+        let counter = 0;
+        function count(element) {
+            counter++;
+            element.innerHTML = 'Сюда было наведено' + ' ' +  counter + ' ' + 'раз';
+        }
+    </script>
 </head>
-<body>
+<body onload="alert('Страница загружена!')">
 <form class="form" method="post" action="http://test.autre.ru/form.php" id="qwe">
     <div>
         <label>
@@ -29,5 +40,12 @@
     </div>
     <input type="submit" class="form__submit" value='submit' formmethod="post" form="qwe">
 </form>
+
+<div>
+    <input type="button" name="submit" value="click" onclick="buttonClick(this)">
+</div>
+
+<span onmouseover="count(this)">Сюда было наведено 0 раз</span>
+
 </body>
 </html>
