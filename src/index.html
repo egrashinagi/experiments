@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+
+        let counter = 0;
+
         function buttonClick(button) {
             alert('Вы нажали на кнопку под названием' + ' ' + button.name + ' ' + 'и со значением' + ' ' + button.value + ' ' + 'тип кнопки' + ' ' + button.type);
         }
-
-        let counter = 0;
-        function count(element) {
+        function count(elem1,elem2 ) {
             counter++;
-            element.innerHTML = 'Сюда было наведено' + ' ' +  counter + ' ' + 'раз';
+            elem1.innerHTML = 'Сюда было наведено' + ' ' +  counter + ' ' + 'раз';
+            elem1.style.color = 'green';
+
+            elem2.innerHTML = 'Сюда было нажато' + ' ' +  counter + ' ' + 'раз';
+        }
+
+        let obj = document.createElement('div');
+        function buttonCount(element) {
+            obj.alert('WOW');
         }
     </script>
 </head>
@@ -43,6 +52,9 @@
 
 <div>
     <input type="button" name="submit" value="click" onclick="buttonClick(this)">
+</div>
+<div>
+    <input type="button" name="submit" value="click" onclick="buttonCount(this)">
 </div>
 
 <span onmouseover="count(this)">Сюда было наведено 0 раз</span>

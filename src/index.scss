@@ -1,24 +1,31 @@
 .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    background-color: #d6d6d6;
+  background-color: #d6d6d6;
 }
 
 .error input,
 .error textarea {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .error {
-    color: red;
+  color: red;
 }
 
 .newClass {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
-input {
-   outline: none;
+input, textarea {
+  outline: none;
+  margin: 10px;
+}
+
+span {
+  padding: 10px;
+  //margin: 20px 30px;
+  color: #3d29ff;
 }

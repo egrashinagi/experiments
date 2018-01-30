@@ -32,7 +32,7 @@ function checkField() {
             console.log('field is blanck', fields[i]);
             let error = generateError('*');
             form[i].parentElement.insertBefore(error, fields[i]);
-            // fields[i].style.border = '1px solid red';
+            fields[i].style.border = '0.5px solid red';
         }
     }
 }
